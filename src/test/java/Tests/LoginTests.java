@@ -34,4 +34,10 @@ public class LoginTests extends base{
         landingPage.verifyLoginSuccess();
         takesScreenshots.takesSnapShot(driver,"Landing page");
     }
+
+    @Test(priority = 5)
+    public void clickLearnTabTest() {
+        learnPage.clickLearnTab();
+        takesScreenshots.takesSnapShot(driver, "learn page");
+    }
 }
