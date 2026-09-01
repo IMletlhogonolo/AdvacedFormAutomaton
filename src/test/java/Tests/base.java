@@ -1,9 +1,6 @@
 package Tests;
 
-import Pages.HomePage;
-import Pages.LandingPage;
-import Pages.LearnPage;
-import Pages.LoginPage;
+import Pages.*;
 import Utils.BrowserFactory;
 import Utils.ReadData;
 import Utils.TakesScreenshots;
@@ -20,6 +17,7 @@ public class base {
     public TakesScreenshots takesScreenshots = new TakesScreenshots();
     public LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
     public LearnPage learnPage = PageFactory.initElements(driver, LearnPage.class);
+    public WebAutomationAdvancePage webAutomationAdvancePage = PageFactory.initElements(driver, WebAutomationAdvancePage.class);
 
     ReadData readData;
 

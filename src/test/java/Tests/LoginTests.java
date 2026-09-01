@@ -3,36 +3,37 @@ package Tests;
 import Utils.ReadData;
 import org.testng.annotations.Test;
 
-public class LoginTests extends base{
+public class LoginTests extends base {
 
 
     @Test
     public void clickLoginButton() throws InterruptedException {
-        takesScreenshots.takesSnapShot(driver,"landing page");
+        takesScreenshots.takesSnapShot(driver, "landing page");
         homePage.clickLoginButton();
     }
 
     @Test(priority = 1)
-    public void enterUsernameTests(){
+    public void enterUsernameTests() {
         loginPage.enterUsername(ReadData.username);
     }
 
     @Test(priority = 2)
-    public void enterPassword(){
+    public void enterPassword() {
         loginPage.enterPassword(ReadData.password);
-        takesScreenshots.takesSnapShot(driver,"login page");
+        takesScreenshots.takesSnapShot(driver, "login page");
     }
 
     @Test(priority = 3)
     public void clickLoginSubmitButton() throws InterruptedException {
         loginPage.clickLoginSubmitButton();
         Thread.sleep(2000);
-        takesScreenshots.takesSnapShot(driver,"dashboard page");
+        takesScreenshots.takesSnapShot(driver, "dashboard page");
     }
+
     @Test(priority = 4)
-    public void verifyLoginSuccessTest(){
+    public void verifyLoginSuccessTest() {
         landingPage.verifyLoginSuccess();
-        takesScreenshots.takesSnapShot(driver,"Landing page");
+        takesScreenshots.takesSnapShot(driver, "Landing page");
     }
 
     @Test(priority = 5)
@@ -42,8 +43,15 @@ public class LoginTests extends base{
     }
 
     @Test(priority = 6)
-    public void clickLearningMaterialsTest(){
+    public void clickLearningMaterialsTest() {
         learnPage.clickLearningMaterials();
-        takesScreenshots.takesSnapShot(driver,"learning materials page");
+        takesScreenshots.takesSnapShot(driver, "learning materials page");
     }
+
+    @Test(priority = 7)
+    public void webAutomationAdvanceTest() {
+        webAutomationAdvancePage.clickWebAutomationAdvance();
+        takesScreenshots.takesSnapShot(driver, "web automation advance page");
+    }
+
 }
