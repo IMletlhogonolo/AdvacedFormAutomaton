@@ -40,4 +40,10 @@ public class LoginTests extends base{
         learnPage.clickLearnTab();
         takesScreenshots.takesSnapShot(driver, "learn page");
     }
+
+    @Test(priority = 6)
+    public void clickLearningMaterialsTest(){
+        learnPage.clickLearningMaterials();
+        takesScreenshots.takesSnapShot(driver,"learning materials page");
+    }
 }

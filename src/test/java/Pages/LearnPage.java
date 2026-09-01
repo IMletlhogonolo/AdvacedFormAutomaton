@@ -15,6 +15,9 @@ public class LearnPage {
     @FindBy(xpath = "//span[normalize-space()='Learn']")
     WebElement learnTab;
 
+    @FindBy(xpath = "//span[normalize-space()='Learning Materials']")
+    WebElement learningMaterialsOption;
+
     public LearnPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -23,5 +26,11 @@ public class LearnPage {
         new WebDriverWait(driver, Duration.ofSeconds(15))
                 .until(ExpectedConditions.elementToBeClickable(learnTab));
         learnTab.click();
+    }
+
+    public void clickLearningMaterials() {
+        new WebDriverWait(driver, Duration.ofSeconds(15))
+                .until(ExpectedConditions.elementToBeClickable(learningMaterialsOption));
+        learningMaterialsOption.click();
     }
 }
