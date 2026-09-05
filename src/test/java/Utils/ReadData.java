@@ -42,6 +42,15 @@ public class ReadData {
 //    public static String wrong = sheet.getRow(3).getCell(0).getStringCellValue();
 //    public static String wrongpass = sheet.getRow(2).getCell(1).getStringCellValue();
 
+    static XSSFSheet inventorySheet = workbook.getSheet("Inventory Details");
+
+    public static String deviceType = inventorySheet.getRow(1).getCell(0).getStringCellValue();
+    public static String brand = inventorySheet.getRow(1).getCell(1).getStringCellValue();
+    public static String storage = inventorySheet.getRow(1).getCell(2).getStringCellValue();
+    public static String colour = inventorySheet.getRow(1).getCell(3).getStringCellValue();
+    public static int quantity = (int) inventorySheet.getRow(1).getCell(4).getNumericCellValue();
+    public static String address = inventorySheet.getRow(1).getCell(5).getStringCellValue();
+
 //    @Test
 //    public void testData(){
 //       System.out.println("Username: " + username);

@@ -18,6 +18,7 @@ public class base {
     public LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
     public LearnPage learnPage = PageFactory.initElements(driver, LearnPage.class);
     public WebAutomationAdvancePage webAutomationAdvancePage = PageFactory.initElements(driver, WebAutomationAdvancePage.class);
+    public InventoryFormPage inventoryFormPage = PageFactory.initElements(driver, InventoryFormPage.class);
 
     ReadData readData;
 

@@ -49,9 +49,23 @@ public class LoginTests extends base {
     }
 
     @Test(priority = 7)
-    public void webAutomationAdvanceTest() {
+    public void ClickingWebAutomationAdvanceTest() {
         webAutomationAdvancePage.clickWebAutomationAdvance();
         takesScreenshots.takesSnapShot(driver, "web automation advance page");
     }
 
+    @Test(priority = 8)
+    public void SelectingDeviceOptionsTest() {
+        inventoryFormPage.selectDeviceType(ReadData.deviceType);
+        inventoryFormPage.selectBrand(ReadData.brand);
+        inventoryFormPage.selectStorage(ReadData.storage);
+        inventoryFormPage.selectColour(ReadData.colour);
+        inventoryFormPage.enterQuantity(ReadData.quantity);
+        inventoryFormPage.enterAddress(ReadData.address);
+        takesScreenshots.takesSnapShot(driver, "inventory form page");
+
+    }
+
 }
+
+
