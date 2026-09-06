@@ -85,6 +85,15 @@ public class LoginTests extends base {
         takesScreenshots.takesSnapShot(driver, "extras page completed");
     }
 
+    @Test(priority = 11)
+    public void confirmPurchaseTest() {
+        extrasPage.clickConfirmPurchase();
+        takesScreenshots.takesSnapShot(driver, "purchase confirmed");
+    }
+
+
+
+
 
 }
 

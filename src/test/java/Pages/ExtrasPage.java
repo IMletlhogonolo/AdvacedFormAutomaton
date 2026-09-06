@@ -3,6 +3,10 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ExtrasPage {
 
@@ -28,6 +32,11 @@ public class ExtrasPage {
 
     @FindBy(id = "apply-discount-btn")
     WebElement applyDiscountButton;
+
+    @FindBy(id = "purchase-device-btn")
+    WebElement confirmPurchaseButton;
+
+
 
     public ExtrasPage(WebDriver driver) {
         this.driver = driver;
@@ -62,4 +71,10 @@ public class ExtrasPage {
     public void clickApplyDiscount() {
         applyDiscountButton.click();
     }
+
+    public void clickConfirmPurchase() {
+        confirmPurchaseButton.click();
+    }
+
+
 }
