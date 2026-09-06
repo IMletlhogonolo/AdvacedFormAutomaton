@@ -21,6 +21,7 @@ public class base {
     public InventoryFormPage inventoryFormPage = PageFactory.initElements(driver, InventoryFormPage.class);
     public VerifyOrderPage pressNext = PageFactory.initElements(driver, VerifyOrderPage.class);
     public ExtrasPage extrasPage = PageFactory.initElements(driver, ExtrasPage.class);
+    public ViewInvoice viewInvoice = PageFactory.initElements(driver, ViewInvoice.class);
 
 
     ReadData readData;

@@ -36,7 +36,8 @@ public class ExtrasPage {
     @FindBy(id = "purchase-device-btn")
     WebElement confirmPurchaseButton;
 
-
+    @FindBy(id = "view-history-btn")
+    WebElement viewInvoiceButton;
 
     public ExtrasPage(WebDriver driver) {
         this.driver = driver;
@@ -76,5 +77,8 @@ public class ExtrasPage {
         confirmPurchaseButton.click();
     }
 
-
+    public void waitForPurchaseConfirmation() {
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOf(viewInvoiceButton));
+    }
 }

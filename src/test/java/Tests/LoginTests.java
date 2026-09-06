@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.ViewInvoice;
 import Utils.ReadData;
 import org.testng.annotations.Test;
 
@@ -88,7 +89,21 @@ public class LoginTests extends base {
     @Test(priority = 11)
     public void confirmPurchaseTest() {
         extrasPage.clickConfirmPurchase();
+        extrasPage.waitForPurchaseConfirmation();
         takesScreenshots.takesSnapShot(driver, "purchase confirmed");
+
+    }
+
+    @Test(priority = 12)
+    public void viewInvoiceTest() {
+        viewInvoice.clickViewInvoice();
+        takesScreenshots.takesSnapShot(driver, "invoice history viewed");
+    }
+
+    @Test(priority = 13)
+    public void viewInvoiceDetailTest() {
+        viewInvoice.clickViewInvoiceDetail();
+        takesScreenshots.takesSnapShot(driver, "invoice detail viewed");
     }
 
 
