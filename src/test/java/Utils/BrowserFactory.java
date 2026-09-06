@@ -12,13 +12,13 @@ public class BrowserFactory {
     static WebDriver driver;
 
     public static WebDriver launchBrowser(String browserChoice, String url) {
-        if (browserChoice.equalsIgnoreCase("ChroMe")) {
+        if (browserChoice.equalsIgnoreCase("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
            // chromeOptions.addArguments("--headless=new");
             driver = new ChromeDriver(chromeOptions);
         } else if (browserChoice.equalsIgnoreCase("edge")) {
             EdgeOptions edgeOptions = new EdgeOptions();
-            edgeOptions.addArguments("--headless=new");
+            // edgeOptions.addArguments("--headless=new");
             driver = new EdgeDriver(edgeOptions);
             driver.manage().window().setSize(new Dimension(1920, 1080));
         } else {

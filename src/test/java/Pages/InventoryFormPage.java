@@ -29,6 +29,8 @@ public class InventoryFormPage {
     @FindBy(id = "address")
     WebElement addressTextbox;
 
+
+
     public InventoryFormPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -75,4 +77,7 @@ public class InventoryFormPage {
         addressTextbox.clear();
         addressTextbox.sendKeys(address);
     }
+
+
 }
+

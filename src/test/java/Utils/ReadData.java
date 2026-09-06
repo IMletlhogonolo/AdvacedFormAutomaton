@@ -51,6 +51,13 @@ public class ReadData {
     public static int quantity = (int) inventorySheet.getRow(1).getCell(4).getNumericCellValue();
     public static String address = inventorySheet.getRow(1).getCell(5).getStringCellValue();
 
+    static XSSFSheet extrasSheet = workbook.getSheet("Extras Details");
+
+    public static String shippingMethod = extrasSheet.getRow(1).getCell(0).getStringCellValue();
+    public static String warranty = extrasSheet.getRow(1).getCell(1).getStringCellValue();
+    public static String discountCode = extrasSheet.getRow(1).getCell(2).getStringCellValue();
+    public static String applyDiscount = extrasSheet.getRow(1).getCell(3).getStringCellValue();
+
 //    @Test
 //    public void testData(){
 //       System.out.println("Username: " + username);

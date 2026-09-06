@@ -66,6 +66,26 @@ public class LoginTests extends base {
 
     }
 
+        @Test(priority = 9)
+        public void ConfirmOrderTest() throws InterruptedException {
+            pressNext.clickNext();
+            takesScreenshots.takesSnapShot(driver, "next page");
+        }
+
+    @Test(priority = 10)
+    public void extrasPageTest() {
+        extrasPage.selectShippingMethod(ReadData.shippingMethod);
+        extrasPage.selectWarranty(ReadData.warranty);
+
+        if (ReadData.applyDiscount.equalsIgnoreCase("yes")) {
+            extrasPage.enterDiscountCode(ReadData.discountCode);
+            extrasPage.clickApplyDiscount();
+        }
+
+        takesScreenshots.takesSnapShot(driver, "extras page completed");
+    }
+
+
 }
 
 
